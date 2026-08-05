@@ -1,0 +1,41 @@
+.tabla-razas {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.tabla-razas th {
+    background-color: #0d233a;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 14px;
+    font-family: 'Cinzel', serif;
+    text-align: left;
+    border: 1px solid #0d233a;
+}
+
+.tabla-razas td {
+    padding: 12px;
+    border: 1px solid #cccccc;
+}
+
+.tabla-razas tr:nth-child(even) {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.tabla-razas tbody tr:nth-child(odd) {
+    background-color: #d4edda;
+    color: #000000;
+}
+
+.lista-intereses {
+    padding-left: 20px;
+    line-height: 1.8;
+    color: #333333;
+}
+
+.lista-intereses li {
+    margin-bottom: 8px;
+}
