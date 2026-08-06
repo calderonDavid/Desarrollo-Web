@@ -1,6 +1,44 @@
+.seccion-bienvenida {
+    margin-bottom: 20px;
+}
+.seccion-link{
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.seccion-trifuerza {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
 .imagen-flotante {
     float: left;
     margin: 5px 20px 15px 0px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+.imagen-link {
+    float: left;
+    height: 180px;
+    width: auto;
+    margin-right: 25px; 
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+.imagen-trifuerza {
+    float: left;
+    height: 180px;
+    width: auto;
+    margin-right: 25px; 
+    margin-bottom: 10px;
     border: 1px solid #000000;
     border-radius: 5px;
 }
