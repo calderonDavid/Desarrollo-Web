@@ -11,27 +11,27 @@ body {
     flex-direction: column;
 }
 
-.header {
+header {
     position: sticky;
     top: 0;
     left: 0;
     z-index: 2;
     width: 100%;
-    background-color: #2c3e50;
+    background-color: #5e7e3e;
 }
 
-.header ul {
+header ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
 }
 
-.header li {
+header li {
     flex: 1;
 }
 
-.header a {
+header a {
     display: block;
     color: white;
     text-align: center;
@@ -41,8 +41,8 @@ body {
     transition: background-color 0.3s;
 }
 
-.header a:hover {
-    background-color: #3498db;
+header a:hover {
+    background-color: #a4b95b;
 }
 
 .container {
@@ -54,7 +54,7 @@ body {
 }
 .container h1,h2 {
     display: inline-block;
-    border-bottom: 5px solid #3498db;
+    border-bottom: 5px solid #5e7e3e;
     padding-bottom: 8px;
     font-family: 'Cinzel', serif;
     margin-top: 0;
@@ -67,7 +67,6 @@ body {
 }
 
 .lista li {
-    color: #333333;
     margin-bottom: 12px;
 }
 .lista-desordenada {
@@ -79,12 +78,12 @@ body {
     font-weight: bold;
 }
 .lista-desordenada li::marker {
-    color: #3498db; /* Azul brillante para las viñetas */
+    color: #CB8E4C; /* Azul brillante para las viñetas */
     font-size: 1.1em;
 }
-.footer {
+footer {
     clear: both; 
-    background-color: #2c3e50;
+    background-color: #5e7e3e;
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
