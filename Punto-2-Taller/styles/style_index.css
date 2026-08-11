@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f7;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+}
+
+/* ==========================================================================
+   HEADER Y CARRITO (Flexbox + Inline-Block)
+   ========================================================================== */
+.encabezado-tienda {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 30px;
+    /* Uso de Flexbox para alinear el logo y el carrito */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Uso de display: inline-block para los elementos internos del logo */
+.icono-tienda {
+    display: inline-block;
+    font-size: 26px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.logo-titulo {
+    display: inline-block;
+    font-size: 22px;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.contenedor-carrito-hover {
+    position: relative;
+    padding: 10px;
+    display: inline-block;
+}
+
+.icono-carrito {
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.contador-badge {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    display: inline-block;
+}
+
+/* Desplegable mediante CSS hover */
+.desplegable-carrito {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 340px;
+    background-color: white;
+    color: #333;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    padding: 15px;
+    z-index: 1001;
+}
+
+.contenedor-carrito-hover:hover .desplegable-carrito {
+    display: block;
+}
+
+.tabla-carrito {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.tabla-carrito th, .tabla-carrito td {
+    padding: 8px 4px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.img-miniatura-carrito {
+    width: 40px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 3px;
+    display: block;
+}
+
+.btn-vaciar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block;
+}
+
+.btn-vaciar:hover {
+    background-color: #c0392b;
+}
+
+.texto-vacio {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+}

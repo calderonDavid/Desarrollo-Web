@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerZone - Tienda de Videojuegos</title>
+    <link rel="stylesheet" href="styles/style_index.css">
+</head>
+<body>
+
+    <header class="encabezado-tienda">
+        <div class="logo-marca">
+            <h1 class="logo-titulo">GamerZone Store</h1>
+        </div>
+
+        <div class="contenedor-carrito-hover">
+            <div class="icono-carrito" id="icono-carrito">
+                <img src="images/carrito.png" height="40" alt="Carrito de compras">
+                <span id="contador-carrito" class="contador-badge">0</span>
+            </div>
+
+            <div class="desplegable-carrito" id="desplegable-carrito">
+                <h3>Carrito de Compras</h3>
+                <table class="tabla-carrito">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody id="lista-carrito">
+                    </tbody>
+                </table>
+                <p id="carrito-vacio-texto" class="texto-vacio">El carrito está vacío</p>
+                <button id="btn-vaciar-carrito" class="btn-vaciar">Vaciar carrito</button>
+            </div>
+        </div>
+    </header>
+
+
+
+    <footer class="footer-global">
+        <p>2026 - Programación Web | Ingeniería de Sistemas - Pontificia Universidad Javeriana</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
