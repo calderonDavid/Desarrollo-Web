@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamerZone - Tienda de Videojuegos</title>
     <link rel="stylesheet" href="styles/style_index.css">
+    <!-- Importación de FontAwesome para renderizar el ícono del carrito de compras -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
 
+    <!-- Encabezado fijo superior de la tienda -->
     <header>
         <div class="logo-marca">
             <h1 class="logo-titulo">GamerZone Store</h1>
             <img src="images/logo.png" alt="Logo GamerZone" class="logo-header-img">
         </div>
 
+        <!-- Contenedor del carrito que reacciona al hover -->
         <div class="carrito-hover">
             <div class="icono-carrito" id="icono-carrito">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span id="contador-carrito" class="contador-carrito">0</span>
             </div>
 
+            <!-- Menú desplegable del carrito mediante JS -->
             <div class="menu-carrito" id="desplegable-carrito">
                 <h3>Carrito de Compras</h3>
+                <!-- Tabla para estructurar los elementos agregados -->
                 <table class="tabla-carrito">
                     <thead>
                         <tr>
@@ -32,16 +37,20 @@
                             <th>Cantidad</th>
                         </tr>
                     </thead>
+                    <!-- Inserción dinámica mediante JavaScript de las filas del carrito -->
                     <tbody id="lista-carrito"></tbody>
                 </table>
+                <!-- Mensaje por defecto cuando no hay ítems almacenados -->
                 <p id="carrito-vacio-texto" class="texto-vacio">El carrito está vacío</p>
                 <button id="boton-vaciar-carrito" class="boton-vaciar">Vaciar carrito</button>
             </div>
         </div>
     </header>
 
+    <!-- Contenedor principal del flujo web -->
     <main class="container">
 
+        <!-- Sección de bienvenida e información del comercio -->
         <section class="seccion-info">
             <div class="info-texto">
                 <h2>Tu Universo de Videojuegos</h2>
@@ -50,11 +59,14 @@
             <img src="images/logo.png" alt="Logo GamerZone" class="logo-info-img">
         </section>
 
+        <!-- Sección contenedora del catálogo interactivo -->
         <section class="seccion-tienda">
             <h2>TIENDA DE JUEGOS</h2>
+            <!-- El contenedor donde JS inyectará dinámicamente las tarjetas (Grid 4 columnas) -->
             <div class="grid-productos" id="grid-productos"></div>
         </section>
 
+        <!-- Formulario para registro e inserción de nuevos videojuegos -->
         <section class="card-formulario">
             <h2>Agregar Nuevo Videojuego</h2>
             
@@ -91,7 +103,7 @@
 
                 <div class="campo">
                     <label for="precio">Precio ($):</label>
-                    <input type="number" id="precio" name="precio"  placeholder="Ej. 120000">
+                    <input type="number" id="precio" name="precio" placeholder="Ej. 120000">
                 </div>
 
                 <button type="submit" class="btn-guardar">Guardar Videojuego</button>
@@ -100,6 +112,7 @@
 
     </main>
 
+    <!-- Enlace al archivo de lógica funcional en JS -->
     <script src="js/script_index.js"></script>
 </body>
 </html>

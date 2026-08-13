@@ -24,17 +24,22 @@
             <h1>Galería Multimedia</h1>
             <p>Explora la saga a través de sus tráilers oficiales y resúmenes de su vasta historia. A continuación encontrarás material audiovisual destacado sobre las entregas más emblemáticas de Hyrule.</p>
 
+            <!-- Contenedor flexbox para organizar las tarjetas de video -->
             <div class="seccion-videos">
+                
+                <!-- Tarjeta de video 1: Remake -->
                 <article class="tarjeta-video">
-                    
                     <h2>Tráiler del Remake</h2>
                     <p>Avance oficial de la remasterización que trae de vuelta una de las aventuras más memorables de la saga con un apartado gráfico renovado.</p>
                     
+                    <!-- Contenedor para mantener el aspect ratio 16:9 del iframe mediante CSS -->
                     <div class="video-container">
+                        <!-- Incorporación de video externo vía iframe de YouTube (Sugerencia: agregar loading="lazy" para evitar que bloquee la carga inicial de la página) -->
                         <iframe src="https://www.youtube.com/embed/GLgCZ5FbkKo" title="Tráiler del Remake" allowfullscreen></iframe>
                     </div>
                 </article>
 
+                <!-- Tarjeta de video 2: Lore -->
                 <article class="tarjeta-video">
                     <h2>Historia y Lore de Hyrule</h2>
                     <p>Un recorrido detallado por la cronología oficial, desde la Era Unificada hasta los acontecimientos que dividieron el reino en múltiples líneas temporales.</p>
@@ -44,8 +49,8 @@
                     </div>
                 </article>
 
+                <!-- Tarjeta de video 3: Tears of the Kingdom -->
                 <article class="tarjeta-video">
-                    
                     <h2>Tráiler: Tears of the Kingdom</h2>
                     <p>El épico tráiler de la secuela directa de Breath of the Wild, mostrando la exploración de las islas flotantes y las profundidades del reino.</p>
                     
@@ -53,20 +58,23 @@
                         <iframe src="https://www.youtube.com/embed/uHGShqcAHlQ" title="Tráiler Tears of the Kingdom" allowfullscreen></iframe>
                     </div>
                 </article>
-                <article class="tarjeta-video">
-    <div class="contenido-video">
-        <h2>Links de Interés y Recursos</h2>
-        <p>Enlaces externos recomendados para explorar más a fondo el universo de Hyrule, guías completas y cronología oficial.</p>
-    </div>
-    <img src="../images/Mapa_Hyrule.jpg" alt="Ilustración Ocarina of Time" class="imagen-tarjeta">
 
-    <ul class="lista-links-externos">
-        <li><a href="https://www.zeldadungeon.net/" target="_blank" rel="noopener noreferrer">Guía Completa Paso a Paso por Toda la Saga</a><p>Recorrido detallado y consejos para completar cada uno de los títulos principales.</p></li>
-        <li><a href="https://www.zelda.com" target="_blank" rel="noopener noreferrer">Portal Oficial de The Legend of Zelda</a><p>Noticias de Nintendo, anuncios de eventos y lanzamientos oficiales.</p></li>
-        <li><a href="https://zeldamaps.com" target="_blank" rel="noopener noreferrer">Zelda Maps - Mapas Interactivos</a><p>Exploración detallada de los mapas de Hyrule con ubicación de coleccionables y santuarios.</p></li>
-        <li><a href="https://zelda.fandom.com/es/wiki/Zelda_Wiki" target="_blank" rel="noopener noreferrer">Zelda Wiki en Español</a><p>Enciclopedia colaborativa con el lore completo y fichas de personajes.</p></li>
-    </ul>
-</article>
+                <!-- Tarjeta 4: Sección de recursos y enlaces externos -->
+                <article class="tarjeta-video">
+                    <div class="contenido-video">
+                        <h2>Links de Interés y Recursos</h2>
+                        <p>Enlaces externos recomendados para explorar más a fondo el universo de Hyrule, guías completas y cronología oficial.</p>
+                    </div>
+                    <img src="../images/Mapa_Hyrule.jpg" alt="Ilustración Ocarina of Time" class="imagen-tarjeta">
+
+                    <!-- Lista de enlaces externos. Excelente uso de target="_blank" con rel="noopener noreferrer" para prevenir ataques de tabnabbing y problemas de rendimiento -->
+                    <ul class="lista-links-externos">
+                        <li><a href="https://www.zeldadungeon.net/" target="_blank" rel="noopener noreferrer">Guía Completa Paso a Paso por Toda la Saga</a><p>Recorrido detallado y consejos para completar cada uno de los títulos principales.</p></li>
+                        <li><a href="https://www.zelda.com" target="_blank" rel="noopener noreferrer">Portal Oficial de The Legend of Zelda</a><p>Noticias de Nintendo, anuncios de eventos y lanzamientos oficiales.</p></li>
+                        <li><a href="https://zeldamaps.com" target="_blank" rel="noopener noreferrer">Zelda Maps - Mapas Interactivos</a><p>Exploración detallada de los mapas de Hyrule con ubicación de coleccionables y santuarios.</p></li>
+                        <li><a href="https://zelda.fandom.com/es/wiki/Zelda_Wiki" target="_blank" rel="noopener noreferrer">Zelda Wiki en Español</a><p>Enciclopedia colaborativa con el lore completo y fichas de personajes.</p></li>
+                    </ul>
+                </article>
 
             </div>
 

@@ -1,10 +1,11 @@
 .tabla-razas {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Elimina las separaciones dobles por defecto entre bordes de celdas adyacentes */
     margin: 25px 0;
     font-size: 16px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
+
 .tabla-razas th {
     background-color: #0d233a;
     color: #ffffff;
@@ -20,6 +21,10 @@
     border: 1px solid #cccccc;
 }
 
+/* 
+ * tr:nth-child(even) asigna un fondo a las filas pares.
+ * tbody tr:nth-child(odd) le da el fondo verde pastel a las filas impares del cuerpo.
+ */
 .tabla-razas tr:nth-child(even) {
     background-color: #ffffff;
     color: #000000;
@@ -32,7 +37,7 @@
 
 .lista-intereses {
     padding-left: 20px;
-    line-height: 1.8;
+    line-height: 1.8; /* Aumenta el interlineado vertical del texto dentro de la lista */
     color: #333333;
 }
 

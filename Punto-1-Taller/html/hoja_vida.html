@@ -22,12 +22,15 @@
             <h1>Cronologia y Lanzamientos</h1>
             
             <p>A lo largo de casi cuatro décadas, la franquicia de The Legend of Zelda ha construido una vasta cronología dividida en distintas eras y líneas temporales. En esta sección se repasan las entregas más icónicas que han marcado la evolución de la industria de los videojuegos.</p>
+            
+            <!-- Menú interno/Índice de contenidos usando enlaces ancla (bookmarks) hacia los ID de las secciones -->
             <nav class="seccion-indice">
             <h2>Índice de Contenidos</h2>
             <ol class="lista-indice">
                 <li><a href="#era-unificada">Era Unificada</a></li>
                 <li>
                     <a href="#era-divida">Era Dividida</a>
+                    <!-- Sublista anidada para representar la jerarquía de las líneas temporales -->
                     <ul class="sublista-indice">
                         <li><a href="#linea-derrotado">Línea del Héroe Derrotado</a></li>
                         <li><a href="#linea-nino">Línea del Héroe Niño</a></li>
@@ -37,10 +40,12 @@
                 <li><a href="#era-calamidad">Era de la Calamidad</a></li>
             </ol>
         </nav>
+            <!-- Sección 1: Cronología inicial -->
             <section id="era-unificada" class="seccion-linea-tiempo">
                 <h2>1. La Era Unificada</h2>
                 <p>Corresponde a la secuencia cronológica inicial donde ocurren los eventos fundacionales del reino antes de la fragmentación del tiempo:</p>
 
+                <!-- Lista ordenada para representar la secuencia cronológica de los juegos -->
                 <ol class="lista lista-ordenada">
                     <li><strong>Skyward Sword(2011):</strong> Es el origen de toda la saga. Se explica cómo nació la Espada Maestra, el reino de Hyrule y la maldición que une para siempre a Link, Zelda y Ganondorf.</li>
                     <li> <strong>The Minish Cap</strong> La aparición de la espada Minish y la amenaza del hechicero del viento, Vaati. Link ayuda a los diminutos Minish y se enfrenta al hechicero Vaati, quien busca el poder de la Luz.</li>
@@ -48,15 +53,20 @@
                     <li><strong>Ocarina of Time:</strong> Link viaja entre el pasado y el futuro para impedir que Ganondorf obtenga la Trifuerza. La batalla decisiva por la Trifuerza que fractura la historia en tres líneas de tiempo distintas.</li>
                 </ol>
             </section>
+            
+            <!-- Sección 2: Ramificación en líneas temporales -->
             <section id="era-divida" class="seccion-linea-tiempo">
                 <h2>2. Ramificacion en Tres Lineas Temporales Post-Ocarina</h2>
                 <p>Los sucesos de The Legend of Zelda: Ocarina of Time marcan un punto de inflexión en la historia de la franquicia, dando origen a tres líneas temporales oficiales que desarrollan diferentes acontecimientos en Hyrule.</p>
+                
+                <!-- Contenedor flexbox para organizar las tarjetas de las líneas temporales -->
                 <div class="contenedor-cards">
-                    <article class="subseccion-juegos">
+                    <!-- Uso de <article> para encapsular cada línea temporal como una unidad de contenido independiente -->
+                    <article id="linea-derrotado" class="subseccion-juegos">
                         <h3>Línea del Héroe Caído (El Derrotado)</h3>
                         <p>Ocurre si Link cae en combate frente a Ganondorf, llevando a Hyrule a una era de decadencia y constantes invasiones del mal. Los juegos que abarcan esta linea de tiempo son:</p>
                         
-                        <ul id="linea-derrotado" class="lista lista-desordenada">
+                        <ul  class="lista lista-desordenada">
                             <li>A Link to the Past</li>
                             <li>Oracle of Seasons & Oracle of Ages</li>
                             <li>Link's Awakening</li>
@@ -83,6 +93,8 @@
                     </article>
                 </div>
             </section>
+            
+            <!-- Sección 3: Era moderna/convergente -->
             <section id="era-calamidad" class="seccion-linea-tiempo">
                 <h2>3. La era de la Calamidad </h2>
                 <p>Miles de años después de las líneas temporales anteriores, los acontecimientos convergen en una era distante caracterizada por la tecnología ancestral Shiekah y el reinicio de la leyenda:</p>
@@ -98,4 +110,3 @@
     </footer>
 </body>
 </html>
-        

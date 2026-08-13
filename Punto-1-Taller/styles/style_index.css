@@ -1,6 +1,12 @@
 .seccion-bienvenida {
     margin-bottom: 20px;
 }
+
+/* 
+ * CONTROL DE DESBORDAMIENTO (CLEARFIX):
+ * overflow: hidden obliga a estas secciones a envolver y contener completamente las imágenes 
+ * flotantes internas (float: left), evitando que el contenido siguiente colapse verticalmente.
+ */
 .seccion-link{
     background: #f9f9f9;
     padding: 20px;
@@ -24,15 +30,17 @@
     border: 1px solid #000000;
     border-radius: 5px;
 }
+
 .imagen-link {
     float: left;
     height: 180px;
-    width: auto;
+    width: auto; /* Mantiene la proporción original de aspecto evitando la distorsión */
     margin-right: 25px; 
     margin-bottom: 10px;
     border: 1px solid #000000;
     border-radius: 5px;
 }
+
 .imagen-trifuerza {
     float: left;
     height: 180px;

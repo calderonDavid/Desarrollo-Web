@@ -1,16 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+/* Garantiza que la estructura base del HTML ocupe el 100% de la altura de la ventana del navegador */
 html, body {
     height: 100%;
 }
+/*
+ * Implementa Flexbox en dirección de columna para permitir que el contenido crezca 
+ * y empuje el footer al fondo de la pantalla automáticamente aunque la página tenga poco texto.
+ */
 body {
     font-family: sans-serif;
     background-color: #f4f6f7;
-    min-width: 100vh;
+    min-width: 100vh; /* NOTA: Debería ser 100vw para ancho; usar vh en min-width fuerza el ancho según la altura de la ventana */
     margin: 0;
     display: flex;
     flex-direction: column;
 }
 
+/* 
+ * FIXACIÓN Y NAVEGACIÓN:
+ * position: sticky mantiene el header fijado en la parte superior al hacer scroll sin sacarlo 
+ * del flujo como lo haría position: fixed. z-index: 2 asegura que flote por encima del contenido.
+ */
 header {
     position: sticky;
     top: 0;
@@ -24,13 +35,15 @@ header ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: flex; /* Alinea los ítems del menú de forma horizontal */
 }
 
+/* Distribución equitativa: flex: 1 obliga a que cada botón del menú ocupe exactamente el mismo ancho */
 header li {
     flex: 1;
 }
 
+/* Convierte los enlaces en bloques para responder a clics en toda la superficie del botón */
 header a {
     display: block;
     color: white;
@@ -45,6 +58,7 @@ header a:hover {
     background-color: #a4b95b;
 }
 
+/* CENTRADO Y ANCHO MÁXIMO DEL CONTENIDO: limita el ancho a 900px y centra la caja en la pantalla */
 .container {
     max-width: 900px;
     margin: 40px auto;
@@ -52,6 +66,8 @@ header a:hover {
     background: white;
     border-radius: 8px;  
 }
+
+/* inline-block evita que la línea de borde inferior (border-bottom) ocupe todo el ancho del contenedor */
 .container h1,h2 {
     display: inline-block;
     border-bottom: 5px solid #5e7e3e;
@@ -60,6 +76,7 @@ header a:hover {
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .container p{
     text-align:justify;
     margin-top: 13px;
@@ -73,14 +90,17 @@ header a:hover {
     list-style-position: outside; 
     padding-left: 20px;
 }
+
 .lista-ordenada li::marker {
-    color: #8f281d; /* Rojo/Coral para los números */
+    color: #8f281d;
     font-weight: bold;
 }
 .lista-desordenada li::marker {
-    color: #CB8E4C; /* Azul brillante para las viñetas */
+    color: #CB8E4C;
     font-size: 1.1em;
 }
+
+/* margin-top: auto absorbe el espacio vertical sobrante en la flex-box del body, pegando el footer al fondo */
 footer {
     clear: both; 
     background-color: #5e7e3e;
@@ -91,5 +111,3 @@ footer {
     margin-top: auto;
     font-size: 14px;
 }
-
-

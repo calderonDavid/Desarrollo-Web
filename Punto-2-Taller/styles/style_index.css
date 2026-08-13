@@ -1,3 +1,4 @@
+/* Configuración global de la tipografía y fondo general mediante degradado radial */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: radial-gradient(circle at top, #f5efe3, #eee5d6);
@@ -6,12 +7,13 @@ body {
     color: #4b4037;
 }
 
+/* Estilos de la barra de navegación superior (Header sticky/fijo) */
 header {
     background-color: #F3EBE0;
     border-bottom: 2px solid #E16567;
     padding: 15px 35px;
     display: flex;
-    justify-content: space-between; /* Separa el bloque del título/logo del carrito */
+    justify-content: space-between; /* Alinea los extremos: Logo a la izquierda, Carrito a la derecha */
     align-items: center;
     position: sticky;
     top: 0;
@@ -19,10 +21,11 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
+/* Alineación horizontal dentro del bloque de marca */
 .logo-marca {
     display: flex;
-    align-items: center; /* Alinea verticalmente al centro el título y la imagen */
-    gap: 15px; /* Espaciado entre el título y el logo */
+    align-items: center; 
+    gap: 15px; 
 }
 
 .logo-titulo {
@@ -33,10 +36,11 @@ header {
 }
 
 .logo-header-img {
-    height: 50px; /* Altura idónea para la barra superior */
+    height: 50px; 
     width: auto;
 }
 
+/* Manejo del menú desplegable con comportamiento hover */
 .carrito-hover {
     position: relative;
     padding: 10px;
@@ -51,6 +55,7 @@ header {
     color: #E16567;
 }
 
+/* Badge circular para el número de elementos agregados al carrito */
 .contador-carrito {
     background-color: #b86b5f;
     color: white;
@@ -63,6 +68,7 @@ header {
     right: -10px;
 }
 
+/* Ocultamiento del menú desplegable por defecto */
 .menu-carrito {
     display: none;
     position: absolute;
@@ -77,10 +83,12 @@ header {
     z-index: 1001;
 }
 
+/* Muestra el desplegable al pasar el cursor sobre el área del icono */
 .carrito-hover:hover .menu-carrito {
     display: block;
 }
 
+/* Estructuración tabular del contenido del carrito */
 .tabla-carrito {
     width: 100%;
     border-collapse: collapse;
@@ -129,12 +137,14 @@ header {
     font-size: 13px;
 }
 
+/* Layout y caja contenedora central */
 .container {
     max-width: 1200px;
     margin: 30px auto;
     padding: 0 20px;
 }
 
+/* Sección descriptiva superior estructurada con Flexbox */
 .seccion-info {
     background: #F3EBE0;
     border: 1px solid #924243;
@@ -142,8 +152,6 @@ header {
     padding: 35px 40px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     margin-bottom: 35px;
-    
-    /* Configuración Flexbox */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -159,27 +167,31 @@ header {
     color: #974546;
     margin-top: 0;
 }
+
 .info-texto p {
     margin: 0;
-    line-height: 1.6;          /* Mejora la legibilidad del párrafo */
+    line-height: 1.6;          
     font-size: 15px;
 }
 
 .logo-info-img {
-    width: 150px; /* Tamaño del logo a la derecha */
+    width: 150px; 
     height: auto;
     object-fit: contain;
 }
 
+/* Títulos y subsecciones con bordes decorativos inferiores */
 .seccion-info h2, .seccion-tienda h2, .seccion-agregar h2 {
     display: inline-block;
     border-bottom: 2px solid #E16567;
     color: #964243;
     margin-top: 0;
 }
+
 .seccion-tienda {
     margin-bottom: 60px; 
 }
+
 .seccion-tienda h2, .seccion-agregar h2 {
     text-align: center;
     padding-bottom: 8px;
@@ -187,12 +199,14 @@ header {
     letter-spacing: 1px;
 }
 
+/* Grid para el catálogo con 4 columnas simétricas */
 .grid-productos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 tarjetas por fila */
+    display: flex;
+    flex-wrap: wrap;
     gap: 25px;
 }
 
+/* Estructura de tarjeta individual de videojuego */
 .card-producto {
     background: #F3EBE0;
     border: 1px solid #E16567;
@@ -200,11 +214,11 @@ header {
     padding: 15px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
     display: flex;
+    flex: 1 1 calc(25% - 20px);
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
 }
-
 
 .card-imagen {
     width: 100%;
@@ -258,6 +272,7 @@ header {
     background-color: #c89b73;
 }
 
+/* Tarjeta contenedora del formulario de inserción */
 .card-formulario {
     background-color: #f5efe3;
     border: 1px solid #dfd2c0;
@@ -298,11 +313,12 @@ header {
     padding: 10px 12px;
     border: 1px solid #c8b9a6;
     border-radius: 6px;
-    background-color: #ffffff;      /* Caja blanca de contraste al escribir */
+    background-color: #ffffff;      
     font-size: 14px;
     outline: none;
 }
 
+/* Efecto de foco en los campos del formulario */
 .campo input:focus,
 .campo select:focus {
     border-color: #b07a4f;

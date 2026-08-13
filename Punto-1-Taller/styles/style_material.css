@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centra las tarjetas de video horizontalmente en el eje secundario */
     gap: 30px;
 }
 
@@ -15,15 +15,21 @@
     padding: 25px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    box-sizing: border-box; /* Incluye el padding dentro del cálculo del ancho total */
     text-align: center;
 }
+
 .tarjeta-video h2 {
     text-align: center;
     border-bottom: 5px solid #5e7e3e;
     padding-bottom: 8px;
     margin-bottom: 12px;
 }
+
+/* 
+ * padding-bottom: 56.25% calcula exactamente la proporción de un video panorámico (9 / 16 = 0.5625).
+ * Se fuerza height: 0 para que sea el padding inferior quien mantenga la altura dinámica.
+ */
 .video-container {
     position: relative;
     z-index: 1;
@@ -34,6 +40,11 @@
     margin: 0 auto;
     border-radius: 6px;
 }
+
+/* 
+ * Al estar la caja contenedora con height: 0, el iframe se expande a 100% de alto y ancho 
+ * cubriendo exactamente el área reservada por el padding.
+ */
 .video-container iframe {
     position: absolute;
     top: 0;
@@ -42,6 +53,7 @@
     height: 100%;
     border: 0;
 }
+
 .lista-links-externos {
     list-style-type: none;
     padding: 0;
