@@ -6,13 +6,13 @@
     <title>GamerZone - Tienda de Videojuegos</title>
     <link rel="stylesheet" href="styles/style_index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 </head>
 <body>
 
-    <header >
+    <header>
         <div class="logo-marca">
             <h1 class="logo-titulo">GamerZone Store</h1>
+            <img src="images/logo.png" alt="Logo GamerZone" class="logo-header-img">
         </div>
 
         <div class="carrito-hover">
@@ -32,34 +32,31 @@
                             <th>Cantidad</th>
                         </tr>
                     </thead>
-                    <tbody id="lista-carrito">
-                    </tbody>
+                    <tbody id="lista-carrito"></tbody>
                 </table>
                 <p id="carrito-vacio-texto" class="texto-vacio">El carrito está vacío</p>
                 <button id="boton-vaciar-carrito" class="boton-vaciar">Vaciar carrito</button>
             </div>
         </div>
     </header>
+
     <main class="container">
 
-        <!-- Sección de Información del Negocio -->
         <section class="seccion-info">
-            <h2>Tu Universo de Videojuegos</h2>
-            <p>Bienvenido a GamerZone, tu tienda especializada en títulos para PC, PlayStation, Xbox y Nintendo. Explora nuestras ofertas exclusivas en lanzamientos recientes y clásicos aclamados, o agrega nuevos títulos a nuestro catálogo interactivo.</p>
+            <div class="info-texto">
+                <h2>Tu Universo de Videojuegos</h2>
+                <p>Bienvenido a GamerZone, tu tienda especializada en títulos para PC, PlayStation, Xbox y Nintendo. Explora nuestras ofertas exclusivas en lanzamientos recientes y clásicos aclamados, o agrega nuevos títulos a nuestro catálogo interactivo.</p>
+            </div>
+            <img src="images/logo.png" alt="Logo GamerZone" class="logo-info-img">
         </section>
 
-        <!-- Sección de la Tienda (Tabla de Productos) -->
         <section class="seccion-tienda">
             <h2>TIENDA DE JUEGOS</h2>
-            <div class="grid-productos" id="grid-productos">
-                <!-- Cards de productos agregadas dinámicamente -->
-            </div>
+            <div class="grid-productos" id="grid-productos"></div>
         </section>
 
-        <!-- Sección Agregar Artículo (Formulario) -->
         <section class="seccion-agregar">
             <h2>AGREGAR ARTÍCULO</h2>
-            
             <div class="contenedor-card-formulario">
                 <form id="formulario-articulo" class="card-formulario">
                     
@@ -84,8 +81,13 @@
                     </div>
 
                     <div class="campo-form">
+                        <label for="desarrollador-articulo">Desarrollador (Atributo 4):</label>
+                        <input type="text" id="desarrollador-articulo" required placeholder="Ej: Santa Monica Studio">
+                    </div>
+
+                    <div class="campo-form">
                         <label for="imagen-articulo">URL de la Imagen:</label>
-                        <input type="url" id="imagen-articulo" required placeholder="https://via.placeholder.com/100">
+                        <input type="url" id="imagen-articulo" required placeholder="https://via.placeholder.com/300x180">
                     </div>
 
                     <div class="campo-form">

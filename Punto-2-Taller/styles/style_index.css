@@ -1,19 +1,17 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: radial-gradient(circle at top, #1e293b, #0f172a);
-    background-attachment: fixed;
+    background: radial-gradient(circle at top, #f5efe3, #eee5d6);
     margin: 0;
     padding: 0;
-    color: #f1f5f9;
+    color: #4b4037;
 }
 
 header {
-    background-color: #0b0f19;
-    border-bottom: 2px solid #38bdf8;
-    color: #ffffff;
+    background-color: #F3EBE0;
+    border-bottom: 2px solid #E16567;
     padding: 15px 35px;
-    display: flex;
-    justify-content: space-between;
+    display:s flex;
+    justify-content: space-between; /* Separa el bloque del título/logo del carrito */
     align-items: center;
     position: sticky;
     top: 0;
@@ -21,19 +19,22 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-.icono-tienda {
-    display: inline-block;
-    font-size: 26px;
-    vertical-align: middle;
-    margin-right: 8px;
+.logo-marca {
+    display: flex;
+    align-items: center; /* Alinea verticalmente al centro el título y la imagen */
+    gap: 15px; /* Espaciado entre el título y el logo */
 }
 
 .logo-titulo {
     font-size: 24px;
     margin: 0;
-    vertical-align: middle;
-    color: #38bdf8;
+    color: #E16567;
     letter-spacing: 1px;
+}
+
+.logo-header-img {
+    height: 50px; /* Altura idónea para la barra superior */
+    width: auto;
 }
 
 .carrito-hover {
@@ -47,11 +48,11 @@ header {
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color:#38bdf8;
+    color: #E16567;
 }
 
 .contador-carrito {
-    background-color: #e74c3c;
+    background-color: #b86b5f;
     color: white;
     font-size: 12px;
     font-weight: bold;
@@ -68,10 +69,9 @@ header {
     right: 0;
     top: 100%;
     width: 350px;
-    background-color: #1e293b;
-    color: #f8fafc;
+    background-color: #F3EBE0;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    border: 1px solid #38bdf8;
+    border: 1px solid #E16567;
     border-radius: 8px;
     padding: 15px;
     z-index: 1001;
@@ -88,22 +88,29 @@ header {
 }
 
 .tabla-carrito th {
-    color: #38bdf8;
-    border-bottom: 1px solid #334155;
+    color: #b07a4f;
+    border-bottom: 1px solid #dfd2c0;
     padding: 8px 4px;
     text-align: left;
 }
 
 .tabla-carrito td {
     padding: 8px 4px;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid #dfd2c0;
+}
+
+.img-miniatura-carrito {
+    width: 40px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .boton-vaciar {
     width: 100%;
     margin-top: 10px;
     padding: 8px;
-    background-color: #e74c3c;
+    background-color: #b86b5f;
     color: white;
     border: none;
     border-radius: 4px;
@@ -112,48 +119,70 @@ header {
     display: block;
 }
 
-.btn-vaciar:hover {
-    background-color: #c0392b;
+.boton-vaciar:hover {
+    background-color: #9e5b51;
 }
 
 .texto-vacio {
     text-align: center;
-    color: #888;
+    color: #8a7c6b;
     font-size: 13px;
 }
-
-
-
 
 .container {
     max-width: 1000px;
     margin: 30px auto;
     padding: 0 20px;
 }
+
 .seccion-info {
-    background: #1e293b;
-    border: 1px solid #334155;
+    background: #F3EBE0;
+    border: 1px solid #924243;
     border-radius: 10px;
-    padding: 20px 25px;
+    padding: 35px 40px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     margin-bottom: 35px;
+    
+    /* Configuración Flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.seccion-info h2 {
-    color: #38bdf8;
+.info-texto {
+    flex: 1; /* Ocupa todo el espacio sobrante a la izquierda */
+}
+
+.info-texto h2 {
+    color: #974546;
+    margin-top: 0;
+}
+.info-texto p {
+    margin: 0;
+    line-height: 1.6;          /* Mejora la legibilidad del párrafo */
+    font-size: 15px;
+}
+
+.logo-info-img {
+    width: 150px; /* Tamaño del logo a la derecha */
+    height: auto;
+    object-fit: contain;
+}
+
+.seccion-info h2, .seccion-tienda h2, .seccion-agregar h2 {
+    color: #964243;
     margin-top: 0;
 }
 
 .seccion-tienda h2, .seccion-agregar h2 {
     text-align: center;
-    color: #38bdf8;
-    border-bottom: 2px solid #38bdf8;
+    border-bottom: 2px solid #E16567;
     padding-bottom: 8px;
     margin-bottom: 30px;
     letter-spacing: 1px;
 }
 
-/* Grid para las cards de la tienda */
 .grid-productos {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -161,12 +190,9 @@ header {
     margin-bottom: 50px;
 }
 
-/* ==========================================================================
-ESTILOS DE LAS CARDS (PRODUCTOS Y FORMULARIO)
-   ========================================================================== */
 .card-producto {
-    background: #1e293b;
-    border: 1px solid #334155;
+    background: #F3EBE0;
+    border: 1px solid #E16567;
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
@@ -179,10 +205,9 @@ ESTILOS DE LAS CARDS (PRODUCTOS Y FORMULARIO)
 
 .card-producto:hover {
     transform: translateY(-4px);
-    border-color: #38bdf8;
+    border-color: #E16567;
 }
 
-/* Imagen de la card */
 .card-imagen {
     width: 100%;
     height: 180px;
@@ -194,12 +219,12 @@ ESTILOS DE LAS CARDS (PRODUCTOS Y FORMULARIO)
 .card-titulo {
     font-size: 18px;
     margin: 0 0 10px 0;
-    color: #f8fafc;
+    color: #4b4037;
 }
 
 .card-detalles {
     font-size: 13px;
-    color: #94a3b8;
+    color: #8a7c6b;
     margin-bottom: 15px;
 }
 
@@ -208,22 +233,22 @@ ESTILOS DE LAS CARDS (PRODUCTOS Y FORMULARIO)
 }
 
 .card-detalles span {
-    color: #cbd5e1;
+    color: #6d6154;
     font-weight: bold;
 }
 
 .card-precio {
     font-size: 20px;
     font-weight: bold;
-    color: #10b981;
+    color: #71866b;
     margin-bottom: 15px;
 }
 
 .btn-agregar-carrito {
     width: 100%;
     padding: 10px;
-    background-color: #38bdf8;
-    color: #0f172a;
+    background-color: #b07a4f;
+    color: #eee5d6;
     border: none;
     border-radius: 6px;
     font-weight: bold;
@@ -232,8 +257,9 @@ ESTILOS DE LAS CARDS (PRODUCTOS Y FORMULARIO)
 }
 
 .btn-agregar-carrito:hover {
-    background-color: #7dd3fc;
+    background-color: #c89b73;
 }
+
 .contenedor-card-formulario {
     display: flex;
     justify-content: center;
@@ -242,8 +268,8 @@ ESTILOS DE LAS CARDS (PRODUCTOS Y FORMULARIO)
 
 .card-formulario {
     width: 100%;
-    max-width: 380px; /* Mismo tamaño estético que una card de producto */
-    border-top: 4px solid #10b981;
+    max-width: 380px;
+    border-top: 4px solid #E16567;
 }
 
 .campo-form {
@@ -255,15 +281,15 @@ ESTILOS DE LAS CARDS (PRODUCTOS Y FORMULARIO)
     font-weight: bold;
     font-size: 12px;
     margin-bottom: 4px;
-    color: #cbd5e1;
+    color: #6d6154;
 }
 
 .campo-form input {
     width: 100%;
     padding: 8px 10px;
-    background-color: #0f172a;
-    border: 1px solid #334155;
-    color: #ffffff;
+    background-color: #eee5d6;
+    border: 1px solid #dfd2c0;
+    color: #4b4037;
     border-radius: 6px;
     box-sizing: border-box;
     font-size: 13px;
@@ -271,14 +297,14 @@ ESTILOS DE LAS CARDS (PRODUCTOS Y FORMULARIO)
 
 .campo-form input:focus {
     outline: none;
-    border-color: #10b981;
+    border-color: #c89b73;
 }
 
 .btn-submit {
     width: 100%;
     padding: 10px;
-    background-color: #10b981;
-    color: #0f172a;
+    background-color: #b07a4f;
+    color: #eee5d6;
     border: none;
     border-radius: 6px;
     font-size: 15px;
@@ -289,5 +315,5 @@ ESTILOS DE LAS CARDS (PRODUCTOS Y FORMULARIO)
 }
 
 .btn-submit:hover {
-    background-color: #34d399;
+    background-color: #b07a4f;
 }
