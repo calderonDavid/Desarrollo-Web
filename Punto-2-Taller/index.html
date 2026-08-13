@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GamerZone - Tienda de Videojuegos</title>
     <link rel="stylesheet" href="styles/style_index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 <body>
 
-    <header class="encabezado-tienda">
+    <header >
         <div class="logo-marca">
             <h1 class="logo-titulo">GamerZone Store</h1>
         </div>
 
-        <div class="contenedor-carrito-hover">
+        <div class="carrito-hover">
             <div class="icono-carrito" id="icono-carrito">
-                <img src="images/carrito.png" height="40" alt="Carrito de compras">
-                <span id="contador-carrito" class="contador-badge">0</span>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="contador-carrito" class="contador-carrito">0</span>
             </div>
 
-            <div class="desplegable-carrito" id="desplegable-carrito">
+            <div class="menu-carrito" id="desplegable-carrito">
                 <h3>Carrito de Compras</h3>
                 <table class="tabla-carrito">
                     <thead>
@@ -34,17 +36,70 @@
                     </tbody>
                 </table>
                 <p id="carrito-vacio-texto" class="texto-vacio">El carrito está vacío</p>
-                <button id="btn-vaciar-carrito" class="btn-vaciar">Vaciar carrito</button>
+                <button id="boton-vaciar-carrito" class="boton-vaciar">Vaciar carrito</button>
             </div>
         </div>
     </header>
+    <main class="container">
 
+        <!-- Sección de Información del Negocio -->
+        <section class="seccion-info">
+            <h2>Tu Universo de Videojuegos</h2>
+            <p>Bienvenido a GamerZone, tu tienda especializada en títulos para PC, PlayStation, Xbox y Nintendo. Explora nuestras ofertas exclusivas en lanzamientos recientes y clásicos aclamados, o agrega nuevos títulos a nuestro catálogo interactivo.</p>
+        </section>
 
+        <!-- Sección de la Tienda (Tabla de Productos) -->
+        <section class="seccion-tienda">
+            <h2>TIENDA DE JUEGOS</h2>
+            <div class="grid-productos" id="grid-productos">
+                <!-- Cards de productos agregadas dinámicamente -->
+            </div>
+        </section>
 
-    <footer class="footer-global">
-        <p>2026 - Programación Web | Ingeniería de Sistemas - Pontificia Universidad Javeriana</p>
-    </footer>
+        <!-- Sección Agregar Artículo (Formulario) -->
+        <section class="seccion-agregar">
+            <h2>AGREGAR ARTÍCULO</h2>
+            
+            <div class="contenedor-card-formulario">
+                <form id="formulario-articulo" class="card-formulario">
+                    
+                    <div class="campo-form">
+                        <label for="nombre-articulo">Nombre del juego:</label>
+                        <input type="text" id="nombre-articulo" required placeholder="Ej: God of War Ragnarok">
+                    </div>
 
-    <script src="js/script.js"></script>
+                    <div class="campo-form">
+                        <label for="plataforma-articulo">Plataforma (Atributo 1):</label>
+                        <input type="text" id="plataforma-articulo" required placeholder="Ej: PlayStation 5 / PC">
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="genero-articulo">Género (Atributo 2):</label>
+                        <input type="text" id="genero-articulo" required placeholder="Ej: Acción / Aventura">
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="clasificacion-articulo">Clasificación (Atributo 3):</label>
+                        <input type="text" id="clasificacion-articulo" required placeholder="Ej: M (Mature 17+)">
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="imagen-articulo">URL de la Imagen:</label>
+                        <input type="url" id="imagen-articulo" required placeholder="https://via.placeholder.com/100">
+                    </div>
+
+                    <div class="campo-form">
+                        <label for="precio-articulo">Precio ($):</label>
+                        <input type="number" id="precio-articulo" required placeholder="Mínimo $1000">
+                    </div>
+
+                    <button type="submit" id="btn-agregar-articulo" class="btn-submit">Agregar artículo</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/script_index.js"></script>
 </body>
 </html>
