@@ -45,7 +45,7 @@
         <section class="seccion-info">
             <div class="info-texto">
                 <h2>Tu Universo de Videojuegos</h2>
-                <p>Bienvenido a GamerZone, tu tienda especializada en títulos para PC, PlayStation, Xbox y Nintendo. Explora nuestras ofertas exclusivas en lanzamientos recientes y clásicos aclamados, o agrega nuevos títulos a nuestro catálogo interactivo.</p>
+                <p>Bienvenido a GamerZone, es una tienda virtual dedicada a los amantes de los videojuegos. En nuestra página encontrarás una gran variedad de videojuegos para diferentes plataformas, además de productos y accesorios para mejorar tu experiencia de juego. Nuestro objetivo es ofrecer productos de calidad, precios accesibles y una experiencia de compra sencilla, rápida y segura. Explora nuestro catálogo, encuentra tus juegos favoritos y lleva tu pasión por los videojuegos al siguiente nivel con GamerZone.</p>
             </div>
             <img src="images/logo.png" alt="Logo GamerZone" class="logo-info-img">
         </section>
@@ -55,49 +55,47 @@
             <div class="grid-productos" id="grid-productos"></div>
         </section>
 
-        <section class="seccion-agregar">
-            <h2>AGREGAR ARTÍCULO</h2>
-            <div class="contenedor-card-formulario">
-                <form id="formulario-articulo" class="card-formulario">
-                    
-                    <div class="campo-form">
-                        <label for="nombre-articulo">Nombre del juego:</label>
-                        <input type="text" id="nombre-articulo" required placeholder="Ej: God of War Ragnarok">
-                    </div>
+        <section class="card-formulario">
+            <h2>Agregar Nuevo Videojuego</h2>
+            
+            <form id="form-juego">
+                <div class="campo">
+                    <label for="titulo">Título del juego:</label>
+                    <input type="text" id="titulo" name="titulo" required placeholder="Ej. Zelda: Tears of the Kingdom">
+                </div>
 
-                    <div class="campo-form">
-                        <label for="plataforma-articulo">Plataforma (Atributo 1):</label>
-                        <input type="text" id="plataforma-articulo" required placeholder="Ej: PlayStation 5 / PC">
-                    </div>
+                <div class="campo">
+                    <label for="plataforma">Plataforma:</label>
+                    <input type="text" id="plataforma" name="plataforma" required placeholder="Ej. PC, PlayStation, Nintendo Switch">
+                </div>
 
-                    <div class="campo-form">
-                        <label for="genero-articulo">Género (Atributo 2):</label>
-                        <input type="text" id="genero-articulo" required placeholder="Ej: Acción / Aventura">
-                    </div>
+                <div class="campo">
+                    <label for="genero">Género:</label>
+                    <input type="text" id="genero" name="genero" required placeholder="Ej. RPG / Acción">
+                </div>
 
-                    <div class="campo-form">
-                        <label for="clasificacion-articulo">Clasificación (Atributo 3):</label>
-                        <input type="text" id="clasificacion-articulo" required placeholder="Ej: M (Mature 17+)">
-                    </div>
+                <div class="campo">
+                    <label for="clasificacion">Clasificación:</label>
+                    <input type="text" id="clasificacion" name="clasificacion" required placeholder="Ej. E (Everyone), M (Mature)">
+                </div>
 
-                    <div class="campo-form">
-                        <label for="desarrollador-articulo">Desarrollador (Atributo 4):</label>
-                        <input type="text" id="desarrollador-articulo" required placeholder="Ej: Santa Monica Studio">
-                    </div>
+                <div class="campo">
+                    <label for="desarrollador">Desarrollador / Estudio:</label>
+                    <input type="text" id="desarrollador" name="desarrollador" required placeholder="Ej. Nintendo, FromSoftware">
+                </div>
 
-                    <div class="campo-form">
-                        <label for="imagen-articulo">URL de la Imagen:</label>
-                        <input type="url" id="imagen-articulo" required placeholder="https://via.placeholder.com/300x180">
-                    </div>
+                <div class="campo">
+                    <label for="imagen">URL de la Imagen:</label>
+                    <input type="url" id="imagen" name="imagen" placeholder="https://ejemplo.com/imagen.jpg">
+                </div>
 
-                    <div class="campo-form">
-                        <label for="precio-articulo">Precio ($):</label>
-                        <input type="number" id="precio-articulo" required placeholder="Mínimo $1000">
-                    </div>
+                <div class="campo">
+                    <label for="precio">Precio ($):</label>
+                    <input type="number" id="precio" name="precio"  placeholder="Ej. 120000">
+                </div>
 
-                    <button type="submit" id="btn-agregar-articulo" class="btn-submit">Agregar artículo</button>
-                </form>
-            </div>
+                <button type="submit" class="btn-guardar">Guardar Videojuego</button>
+            </form>
         </section>
 
     </main>

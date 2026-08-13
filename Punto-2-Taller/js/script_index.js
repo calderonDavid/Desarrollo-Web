@@ -40,17 +40,19 @@ const contadorCarrito = document.querySelector('#contador-carrito');
 const carritoVacioTexto = document.querySelector('#carrito-vacio-texto');
 const btnVaciarCarrito = document.querySelector('#boton-vaciar-carrito');
 
-const formularioArticulo = document.querySelector('#formulario-articulo');
-const campoNombre = document.querySelector('#nombre-articulo');
-const campoPlataforma = document.querySelector('#plataforma-articulo');
-const campoGenero = document.querySelector('#genero-articulo');
-const campoClasificacion = document.querySelector('#clasificacion-articulo');
-const campoDesarrollador = document.querySelector('#desarrollador-articulo');
-const campoImagen = document.querySelector('#imagen-articulo');
-const campoPrecio = document.querySelector('#precio-articulo');
+// Formulario y los 7 campos
+const formularioArticulo = document.querySelector('#form-juego');
+const campoNombre = document.querySelector('#titulo');
+const campoPlataforma = document.querySelector('#plataforma');
+const campoGenero = document.querySelector('#genero');
+const campoClasificacion = document.querySelector('#clasificacion');
+const campoDesarrollador = document.querySelector('#desarrollador');
+const campoImagen = document.querySelector('#imagen');
+const campoPrecio = document.querySelector('#precio');
 
-// Funciones de Renderizado
+// Renderizado de Tarjetas
 const renderizarCatalogo = () => {
+    if (!gridProductos) return;
     gridProductos.innerHTML = '';
 
     catalogoProductos.forEach((producto) => {
@@ -59,7 +61,7 @@ const renderizarCatalogo = () => {
 
         card.innerHTML = `
             <div>
-                <img src="${producto.imagen}" class="card-imagen" alt="${producto.nombre}" onerror="this.src='https://via.placeholder.com/300x180?text=Sin+Imagen'">
+                <img src="${producto.imagen || 'https://via.placeholder.com/300x180?text=Sin+Imagen'}" class="card-imagen" alt="${producto.nombre}" onerror="this.src='https://via.placeholder.com/300x180?text=Sin+Imagen'">
                 <h3 class="card-titulo">${producto.nombre}</h3>
                 <div class="card-detalles">
                     <p><span>Plataforma:</span> ${producto.plataforma}</p>
@@ -91,7 +93,7 @@ const asignarEventosAgregar = () => {
     });
 };
 
-// Lógica del Carrito
+// Carrito
 const agregarAlCarrito = (idProducto) => {
     const productoEncontrado = catalogoProductos.find((prod) => prod.id === idProducto);
     if (!productoEncontrado) return;
@@ -111,15 +113,16 @@ const agregarAlCarrito = (idProducto) => {
 };
 
 const actualizarCarritoDOM = () => {
+    if (!listaCarritoDOM || !contadorCarrito) return;
     listaCarritoDOM.innerHTML = '';
 
     if (carritoCompras.length === 0) {
-        carritoVacioTexto.style.display = 'block';
+        if (carritoVacioTexto) carritoVacioTexto.style.display = 'block';
         contadorCarrito.textContent = '0';
         return;
     }
 
-    carritoVacioTexto.style.display = 'none';
+    if (carritoVacioTexto) carritoVacioTexto.style.display = 'none';
     let totalItems = 0;
 
     carritoCompras.forEach((item) => {
@@ -127,7 +130,7 @@ const actualizarCarritoDOM = () => {
 
         const fila = document.createElement('tr');
         fila.innerHTML = `
-            <td><img src="${item.imagen}" class="img-miniatura-carrito" alt="${item.nombre}" onerror="this.src='https://via.placeholder.com/40'"></td>
+            <td><img src="${item.imagen || 'https://via.placeholder.com/40'}" class="img-miniatura-carrito" alt="${item.nombre}" onerror="this.src='https://via.placeholder.com/40'"></td>
             <td>${item.nombre}</td>
             <td>$${item.precio.toLocaleString()}</td>
             <td>${item.cantidad}</td>
@@ -143,16 +146,9 @@ const vaciarCarrito = () => {
     actualizarCarritoDOM();
 };
 
-// Manejo del Formulario
+// Procesamiento del Formulario Completo
 const procesarFormulario = (e) => {
     e.preventDefault();
-
-    const precio = Number(campoPrecio.value);
-
-    if (precio < 1000) {
-        alert('El precio del artículo debe ser igual o mayor a $1,000.');
-        return;
-    }
 
     const nuevoJuego = {
         id: Date.now(),
@@ -162,17 +158,22 @@ const procesarFormulario = (e) => {
         clasificacion: campoClasificacion.value.trim(),
         desarrollador: campoDesarrollador.value.trim(),
         imagen: campoImagen.value.trim() || 'https://via.placeholder.com/300x180?text=Juego',
-        precio: precio
+        precio: Number(campoPrecio.value)
     };
 
     catalogoProductos.push(nuevoJuego);
     renderizarCatalogo();
-    formularioArticulo.reset();
+    if (formularioArticulo) formularioArticulo.reset();
 };
 
 // Event Listeners
-formularioArticulo.addEventListener('submit', procesarFormulario);
-btnVaciarCarrito.addEventListener('click', vaciarCarrito);
+if (formularioArticulo) {
+    formularioArticulo.addEventListener('submit', procesarFormulario);
+}
+
+if (btnVaciarCarrito) {
+    btnVaciarCarrito.addEventListener('click', vaciarCarrito);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     renderizarCatalogo();
